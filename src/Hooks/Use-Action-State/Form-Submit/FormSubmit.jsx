@@ -1,5 +1,5 @@
 import React from 'react';
-import useActionState from "./ActionState";
+import useActionState from "../counter/ActionState";
 
 export default function FormSubmit(){
 
@@ -24,13 +24,18 @@ export default function FormSubmit(){
     }
 
     return(
-        <>
+        <div className="container text-center background">
+            <div className="row sec-div">
+                <div className="col-lg-12">
+                    useActionState - Form Submit
+                </div>
+            </div>
             <form onSubmit={handleSubmit}>
                 <input name="name" value={state.name} onChange={handleChange} placeholder="Name"/>
                 <input name="email" value={state.email} onChange={handleChange} placeholder="Email"/>
                 <textarea name="message" value={state.message} onChange={handleChange} placeholder="Message"/>
                 <button type="submit">Submit</button>
             </form>
-        </>
+        </div>
     )
 }

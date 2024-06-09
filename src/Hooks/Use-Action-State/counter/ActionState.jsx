@@ -15,6 +15,8 @@ function reducer(state, action){
             return { ...state, loading: false, data: action.payload, isError: false, msg: "Data Fetched"};
         case "FETCH_ERROR":
             return { ...state, loading: false, data: [], isError: true, msg: action.error};
+        case "TOGGLE_COMPONENT":
+            return { ...state, isOpen: !state.isOpen}
         default:
             return state;
     }

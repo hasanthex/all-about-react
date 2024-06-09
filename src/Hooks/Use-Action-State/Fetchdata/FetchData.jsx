@@ -1,5 +1,5 @@
 import React from 'react';
-import useActionState from "./ActionState";
+import useActionState from "../counter/ActionState";
 
 
 function listItem(data){
@@ -40,14 +40,18 @@ export default function FetchData(){
     }
 
     return(
-        <>
-            <button onClick={fetchData}>Fetch Data</button>
+        <div className="container background">
+            <div className="row sec-div text-center">
+                <div className="col-lg-12">
+                    <button onClick={fetchData}>Fetch Data</button>
+                </div>
+            </div>
 
-            { state.loading && "Fetching... ..."}
+            {state.loading && "Fetching... ..."}
 
-            { (state.loading == false && state.isError) && `Error Occurred Due To # ${state.msg}`}
+            {(state.loading == false && state.isError) && `Error Occurred Due To # ${state.msg}`}
 
-            { (state.loading == false && !state.isError) && listItem(state.data)}
-        </>
+            {(state.loading == false && !state.isError) && listItem(state.data)}
+        </div>
     );
 }

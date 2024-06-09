@@ -8,6 +8,25 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.background{
+  background-color: #bde0ff;
+}
+
+.sec-div{
+  background-color: #57b1ff;
+  line-height: 50px;
+}
+
+.inner-div{
+  border: 1px solid aliceblue;
+  min-height: 50px;
+  line-height: 48px;
+}
+
+.inner-div:hover{
+  transition: all 0.3s ease-in-out;
+  background-color: #a3d4ff;
 }
